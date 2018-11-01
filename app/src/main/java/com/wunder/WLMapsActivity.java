@@ -55,12 +55,12 @@ public class WLMapsActivity extends FragmentActivity implements OnMapReadyCallba
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mWLMapController = new WLMapController(this);
-        if (RuntimePermissionUtils.checkPermission(getApplicationContext(), ACCESS_FINE_LOCATION) && RuntimePermissionUtils.checkPermission(getApplicationContext(),ACCESS_COARSE_LOCATION)) {
+        if (RuntimePermissionUtils.Companion.checkPermission(getApplicationContext(), ACCESS_FINE_LOCATION) && RuntimePermissionUtils.Companion.checkPermission(getApplicationContext(),ACCESS_COARSE_LOCATION)) {
             init();
         }
         else {
-            RuntimePermissionUtils.checkPermisionForActivity(this, PERMISSION_REQUEST_CODE, ACCESS_FINE_LOCATION);
-            RuntimePermissionUtils.checkPermisionForActivity(this, PERMISSION_REQUEST_CODE, ACCESS_COARSE_LOCATION);
+            RuntimePermissionUtils.Companion.checkPermisionForActivity(this, PERMISSION_REQUEST_CODE, ACCESS_FINE_LOCATION);
+            RuntimePermissionUtils.Companion.checkPermisionForActivity(this, PERMISSION_REQUEST_CODE, ACCESS_COARSE_LOCATION);
         }
     }
 

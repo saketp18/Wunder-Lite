@@ -51,14 +51,16 @@ public class WLLauncherController extends WLController {
      * <p>
      * This gives essence of refresh to user when network is available.
      */
-    public void updateViewsAfterTask(String result) {
+    public boolean updateViewsAfterTask(String result) {
         if (result != null) {
             Toast.makeText(mContext, "Download error: " + result, Toast.LENGTH_LONG).show();
             mErrorText.setVisibility(View.VISIBLE);
             mProgressBar.setVisibility(View.GONE);
             mErrorText.setText(mContext.getResources().getString(R.string.error_text));
+            return false;
         } else {
             launchListActivity();
+            return true;
         }
     }
 

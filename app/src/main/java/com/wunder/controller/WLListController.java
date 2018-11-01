@@ -44,7 +44,7 @@ public class WLListController extends WLController {
         mContext = mActivity.getApplicationContext();
         mActivity.setContentView(R.layout.activity_list);
         mFilePath = jsonFilepath;
-        carModelArrayList = JSONReader.readJson(mFilePath);
+        carModelArrayList = JSONReader.Companion.readJson(mFilePath);
         mRecyclerView = (RecyclerView) mActivity.findViewById(R.id.recycler_view);
         mFaButton = (FloatingActionButton) mActivity.findViewById(R.id.fab_maps);
         mAdapter = new WLRecyclerViewAdapter(mActivity, this, carModelArrayList);
