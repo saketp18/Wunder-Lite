@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Wunder Lite</string>
+    <string name="title_activity_maps">Wunder Maps</string>
+    <string name="message">Please make sure you provide permissions</string>
+    <string name="error_text">Please check internet connection</string>
+    <string name="name">Name :</string>
+    <string name="address">Address :</string>
+    <string name="engineType">Engine Type: </string>
+    <string name="exterior">Exterior :</string>
+    <string name="interior">Interior :</string>
+    <string name="fuel">Fuel capacity :</string>
+    <string name="vin">VIN :</string>
+</resources>

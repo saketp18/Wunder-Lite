@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/cardview_dark_background"
+        android:text="@string/name"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/name_text"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/address_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/address"
+        android:layout_below="@id/name_text" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/address_text"
+        android:layout_below="@id/name" />
+
+    <TextView
+        android:id="@+id/exterior_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/address"
+        android:textColor="@color/cardview_dark_background" />
+
+
+    <TextView
+        android:id="@+id/exterior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/exterior_text"
+        android:layout_below="@id/address"
+        android:textColor="@color/cardview_dark_background" />
+
+
+    <TextView
+        android:id="@+id/interior_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/exterior_text"
+        android:text="@string/interior"
+        android:textColor="@color/cardview_dark_background" />
+
+    <TextView
+        android:id="@+id/interior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/exterior"
+        android:layout_toRightOf="@id/interior_text"
+        android:textColor="@color/cardview_dark_background" />
+
+
+    <TextView
+        android:id="@+id/engineType_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/interior_text"
+        android:text="@string/engineType"
+        android:textColor="@color/cardview_dark_background" />
+
+    <TextView
+        android:id="@+id/engineType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/interior"
+        android:layout_toRightOf="@+id/engineType_text"
+        android:textColor="@color/cardview_dark_background" />
+
+    <TextView
+        android:id="@+id/fuel_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fuel"
+        android:layout_below="@id/engineType_text"
+        android:textColor="@color/cardview_dark_background" />
+
+    <TextView
+        android:id="@+id/fuel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/engineType"
+        android:layout_toRightOf="@id/fuel_text"
+        android:textColor="@color/cardview_dark_background" />
+
+    <TextView
+        android:id="@+id/vin_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fuel_text"
+        android:text="@string/vin"
+        android:textColor="@color/cardview_dark_background" />
+
+    <TextView
+        android:id="@+id/vin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fuel"
+        android:layout_toRightOf="@id/vin_text"
+        android:textColor="@color/cardview_dark_background" />
+
+
+</RelativeLayout>
