@@ -15,6 +15,8 @@ public class JSONReader {
     private static ArrayList<Double> longitudelist = new ArrayList<>();
 
     private static String readFile(String filePath) {
+        if(filePath == null)
+            return null;
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(filePath));
@@ -39,10 +41,10 @@ public class JSONReader {
     }
 
     public static ArrayList<WLCarModel> readJson(String filepath) {
-        latitudeslist.clear();
-        longitudelist.clear();
         if (filepath == null)
             return null;
+        latitudeslist.clear();
+        longitudelist.clear();
         String jsonData = readFile(filepath);
         WLCarModel wlCarModel;
         int index = 0;
