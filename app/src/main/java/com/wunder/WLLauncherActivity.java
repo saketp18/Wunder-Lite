@@ -33,6 +33,7 @@ public class WLLauncherActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        mWlLauncherController.onDestroy();
     }
 
 

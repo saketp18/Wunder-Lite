@@ -76,4 +76,9 @@ public class WLLauncherController extends WLController {
         mActivity.finish();
     }
 
+    public void onDestroy(){
+        mActivity = null;
+        mContext = null;
+    }
+
 }

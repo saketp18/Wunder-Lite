@@ -68,4 +68,11 @@ public class WLListController extends WLController {
         launchIntent.putExtras(bundle);
         mContext.startActivity(launchIntent);
     }
+
+    public void onDestroy(){
+        carModelArrayList.clear();
+        mRecyclerView = null;
+        mContext = null;
+        mActivity = null;
+    }
 }

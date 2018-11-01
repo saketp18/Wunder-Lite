@@ -40,5 +40,6 @@ public class WLListActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        mWLListController.onDestroy();
     }
 }
