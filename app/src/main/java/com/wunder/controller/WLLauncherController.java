@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.wunder.R;
 import com.wunder.WLListActivity;
@@ -68,12 +67,15 @@ public class WLLauncherController extends WLController {
 
     private void launchListActivity() {
         Intent launchIntent = new Intent(mActivity, WLListActivity.class);
-        launchIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        launchIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         launchIntent.putExtra("filepath", filePath);
         mContext.startActivity(launchIntent);
         mActivity.finish();
     }
 
+    /**
+     * To avoid memory leaks.
+     */
     public void onDestroy(){
         mActivity = null;
         mContext = null;

@@ -66,9 +66,13 @@ public class WLListController extends WLController {
         bundle.putParcelableArrayList("jsonData", carModelArrayList);
         bundle.putInt("position", position);
         launchIntent.putExtras(bundle);
+        launchIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mContext.startActivity(launchIntent);
     }
 
+    /**
+     * To avoid memory leaks.
+     */
     public void onDestroy(){
         carModelArrayList.clear();
         mRecyclerView = null;

@@ -76,6 +76,10 @@ public class WLMapController extends WLController{
     }
 
 
+    /**
+     * Following snippet will get current location and once we have defined regions in map where cars
+     * are available then we can direct user that these cars are available  for riding.
+     */
     /*public void addMarkerCurrentLocation(Location location){
         int height = 108;
         int width = 60;
