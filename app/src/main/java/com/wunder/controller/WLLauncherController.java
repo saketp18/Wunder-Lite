@@ -27,12 +27,9 @@ public class WLLauncherController extends WLController {
     private TextView mErrorText = null;
 
 
-    public WLLauncherController(Activity activity) {
+    public void init(Activity activity) {
         mActivity = activity;
         mContext = activity.getApplicationContext();
-    }
-
-    public void init() {
         mActivity.setContentView(R.layout.activity_launcher);
         mProgressBar = (ProgressBar) mActivity.findViewById(R.id.progress);
         mErrorText = (TextView) mActivity.findViewById(R.id.error_text);
@@ -53,7 +50,6 @@ public class WLLauncherController extends WLController {
      */
     public boolean updateViewsAfterTask(String result) {
         if (result != null) {
-            Toast.makeText(mContext, "Download error: " + result, Toast.LENGTH_LONG).show();
             mErrorText.setVisibility(View.VISIBLE);
             mProgressBar.setVisibility(View.GONE);
             mErrorText.setText(mContext.getResources().getString(R.string.error_text));

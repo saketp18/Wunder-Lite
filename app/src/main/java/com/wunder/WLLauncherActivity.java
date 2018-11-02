@@ -17,9 +17,9 @@ public class WLLauncherActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mWlLauncherController = new WLLauncherController(this);
+        mWlLauncherController = new WLLauncherController();
         if (RuntimePermissionUtils.Companion.checkPermission(getApplicationContext(), WRITE_EXTERNAL_STORAGE))
-            mWlLauncherController.init();
+            mWlLauncherController.init(this);
         else
             RuntimePermissionUtils.Companion.checkPermisionForActivity(this, PERMISSION_REQUEST_CODE, WRITE_EXTERNAL_STORAGE);
 
@@ -42,7 +42,7 @@ public class WLLauncherActivity extends AppCompatActivity {
         if (requestCode == PERMISSION_REQUEST_CODE && grantResults.length > 0) {
             boolean writeAccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
             if (writeAccepted) {
-                mWlLauncherController.init();
+                mWlLauncherController.init(this);
             } else {
                 finish();
             }

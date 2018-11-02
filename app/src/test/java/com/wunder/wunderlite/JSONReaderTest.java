@@ -11,6 +11,6 @@ public class JSONReaderTest {
     @Test
     public void readFile() {
         String filepath = null;
-        assertEquals(JSONReader.readJson(null), filepath);
+        assertEquals(JSONReader.Companion.readJson(null), filepath);
     }
 }
